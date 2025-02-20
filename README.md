@@ -1,3 +1,7 @@
+
+**DISCLAIMER**: This fork of **Pandas TA** is only tested for a subset of the functionalities of the original package. No guarantee whatsoever is given about the correctness of any of the functions inside the package.
+
+
 <p align="center">
   <a href="https://github.com/twopirllc/pandas_ta">
     <img src="images/logo.png" alt="Pandas TA">
