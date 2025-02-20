@@ -5,6 +5,10 @@ description = "An easy to use Python 3 Pandas Extension with 130+ Technical Anal
 authors = [{ name = "Kevin Johnson", email = "appliedmathkj@gmail.com"}]
 license = "MIT"
 requires-python = ">=3.11,<3.13"
+packages = [ { include = "pandas_ta", from = "." } ]
+
+[tool.poetry]
+include = ["data/*.csv"]
 
 [tool.poetry.dependencies]
 numpy = "2.2.3"
@@ -25,8 +29,7 @@ six = "1.16.0"
 # yfinance = { version = "*", optional = true }
 
 [tool.poetry.group.test.dependencies]
-
-
+ta-lib = "^0.6.3"
 
 [tool.poetry.extras]
 dev = ["alphaVantage-api", "matplotlib", "mplfinance", "scipy", "sklearn", "statsmodels", "stochastic", "talib", "tqdm", "vectorbt", "yfinance"]
