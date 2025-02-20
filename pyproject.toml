@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "pandas_ta"
+version = "0.3.14b"
+description = "An easy to use Python 3 Pandas Extension with 130+ Technical Analysis Indicators. Can be called from a Pandas DataFrame or standalone like TA-Lib. Correlation tested with TA-Lib."
+authors = ["Kevin Johnson <appliedmathkj@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+numpy = "2.2.3"
+pandas = "2.2.3"
+python-dateutil = "2.8.2"
+pytz = "2023.3"
+six = "1.16.0"
+alphaVantage-api = { version = "*", optional = true }
+matplotlib = { version = "*", optional = true }
+mplfinance = { version = "*", optional = true }
+scipy = { version = "*", optional = true }
+sklearn = { version = "*", optional = true }
+statsmodels = { version = "*", optional = true }
+stochastic = { version = "*", optional = true }
+talib = { version = "*", optional = true }
+tqdm = { version = "*", optional = true }
+vectorbt = { version = "*", optional = true }
+yfinance = { version = "*", optional = true }
+
+[tool.poetry.extras]
+dev = ["alphaVantage-api", "matplotlib", "mplfinance", "scipy", "sklearn", "statsmodels", "stochastic", "talib", "tqdm", "vectorbt", "yfinance"]
+test = ["ta-lib"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
