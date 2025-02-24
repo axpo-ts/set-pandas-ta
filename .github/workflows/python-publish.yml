@@ -44,5 +44,5 @@ jobs:
         run: poetry build
 
       - name: Publish Package to Azure DevOps
-        run: poetry publish -r azure --build
+        run: poetry publish -r azure
         
