@@ -1,14 +1,23 @@
 [project]
 name = "pandas_ta"
-version = "0.3.14b"
 description = "An easy to use Python 3 Pandas Extension with 130+ Technical Analysis Indicators. Can be called from a Pandas DataFrame or standalone like TA-Lib. Correlation tested with TA-Lib."
 authors = [{ name = "Kevin Johnson", email = "appliedmathkj@gmail.com"}]
 license = "MIT"
 requires-python = ">=3.11,<3.14"
 packages = [ { include = "pandas_ta", from = "." } ]
+dynamic = ["version", "dependencies"]
 
 [tool.poetry]
+version = "0.0.0"
 include = ["data/*.csv"]
+
+[tool.poetry.requires-plugins]
+poetry-dynamic-versioning = { version = ">=1.0.0,<2.0.0", extras = ["plugin"] }
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+style = "semver"
 
 [tool.poetry.dependencies]
 numpy = "^2.2.3"
@@ -24,5 +33,5 @@ ta-lib = "^0.6.3"
 test = ["ta-lib"]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
