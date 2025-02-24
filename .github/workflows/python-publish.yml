@@ -24,7 +24,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install pipx
-      - run: |
+        run: |
           python -m pip install pipx
           pipx ensurepath
 
