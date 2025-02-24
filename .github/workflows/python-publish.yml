@@ -7,8 +7,11 @@ on:
 env:
   POETRY_VERSION: 2.1.1
 
+permissions: {}
+
 jobs:
   publish:
+    name: Publish
     runs-on: ubuntu-latest
 
     steps:
