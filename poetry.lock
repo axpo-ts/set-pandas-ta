@@ -239,10 +239,9 @@ files = [
 ]
 
 [extras]
-dev = []
 test = []
 
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.14"
-content-hash = "99871455d93200b6f86b82467c3b9b03c8eabb1879decbdfa8644f6731e75351"
+content-hash = "7866825fece749eac64b5dbef208f3b290e191611ac48c3da9748397ef25ce39"
