@@ -35,7 +35,8 @@ jobs:
       - name: Configure Poetry for Azure DevOps
         run: |
           poetry config repositories.azure "https://pkgs.dev.azure.com/Axpo-AXSO/POC-SET/_packaging/QuantFabricFeed/pypi/upload"
-          export POETRY_PYPI_TOKEN_AZURE=${{ secrets.AZURE_ARTIFACTS_RW_TOKEN }}
+          export POETRY_HTTP_BASIC_AZURE_USERNAME=${{ secrets.AZURE_ARTIFACTS_RW_EMAIL }}
+          export POETRY_HTTP_BASIC_AZURE_PASSWORD=${{ secrets.AZURE_ARTIFACTS_RW_TOKEN }}
 
       - name: Install Dependencies
         run: poetry install --no-root --without=test
