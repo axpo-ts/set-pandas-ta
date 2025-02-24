@@ -30,7 +30,7 @@ jobs:
 
       - name: Install Poetry
         run: |
-          pipx install poetry=${{ env.POETRY_VERSION }}
+          pipx install poetry==${{ env.POETRY_VERSION }}
 
       - name: Configure Poetry for Azure DevOps
         run: |
